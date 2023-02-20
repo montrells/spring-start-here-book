@@ -11,6 +11,8 @@ public class Main {
         var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
 
         // (4/4) Gets a reference of type Parrot from Spring context
+        //Spring looks for a bean of the type you requested in its context. If such a bean is found, it will be returned, Otherwise Spring will
+        //throw an exception.
         Parrot p = context.getBean(Parrot.class);
 
         System.out.println(p.getName());
